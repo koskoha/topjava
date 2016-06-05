@@ -30,25 +30,4 @@ public class UserMeal {
     public int getCalories() {
         return calories;
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        UserMeal meal = (UserMeal) o;
-
-        if (calories != meal.calories) return false;
-        if (dateTime != null ? !dateTime.equals(meal.dateTime) : meal.dateTime != null) return false;
-        return description != null ? description.equals(meal.description) : meal.description == null;
-
-    }
-
-    @Override
-    public int hashCode() {
-        int result = dateTime != null ? dateTime.hashCode() : 0;
-        result = 31 * result + (description != null ? description.hashCode() : 0);
-        result = 31 * result + calories;
-        return result;
-    }
 }
